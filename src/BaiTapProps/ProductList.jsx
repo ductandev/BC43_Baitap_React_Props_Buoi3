@@ -6,7 +6,7 @@ export default class ProductList extends Component {
 
     renderProduct = () => {
         return arrProduct.map((item) => {
-            return <div className="col-12 col-sm-6 col-lg-4 mt-2" key={item.id}>
+            return <div className="col-8 col-md-6 col-lg-4 mt-3 prodlist" key={item.id}>
                 <ProductItem prodInfo={item} />
             </div> 
         });
@@ -17,10 +17,16 @@ export default class ProductList extends Component {
         return (
             <div className='container'>
                 <h1 className='text-center'>Shoes shop</h1>
-                <div className="row">
+                <div className="row justify-content-center my-auto">
                     {this.renderProduct()}
                 </div>
             </div>
         )
     }
 }
+
+
+
+
+
+

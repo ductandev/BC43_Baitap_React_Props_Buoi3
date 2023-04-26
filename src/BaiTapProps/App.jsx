@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ProductList from './ProductList'
+import './style.css'
 
-export default class BaiTapProps extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
@@ -10,3 +11,6 @@ export default class BaiTapProps extends Component {
     )
   }
 }
+
+
+

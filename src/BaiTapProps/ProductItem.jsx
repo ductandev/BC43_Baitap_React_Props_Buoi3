@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
+import ProductDetail from './ProductDetail';
 
 export default class ProductItem extends Component {
     render() {
 
-        let {prodInfo} = this.props;
+        let { prodInfo } = this.props;
 
         return (
-            <div className="card mx-auto">
+            <div className="card">
                 <img src={prodInfo.image} alt="..." />
                 <div className="card-body">
-                    <h3>{prodInfo.name}</h3>
-                    <p>{prodInfo.price} $</p>
-                    <button className='btn btn-dark me-3'>
-                        Add to cart <i className='fa fa-cart-plus'></i>
-                    </button>
-                    <button className='btn btn-success'>
-                        View detail
-                    </button>
+                    <h3 className='fs-5'>{prodInfo.name}</h3>
+                    <p className='text-danger fw-semibold'>{prodInfo.price} $</p>
+                    <div className='d-flex'>
+                        <button className='btn btn-dark me-3'>
+                            Add to cart <i className='fa fa-cart-plus'></i>
+                        </button>
+                        <button className='btn btn-success' data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => {
+                            <ProductDetail setStateModal={this.prodInfo}/>
+                        }}>
+                            View detail
+                        </button>
+                    </div>
                 </div>
             </div>
         )

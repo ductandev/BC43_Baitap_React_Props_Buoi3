@@ -1,0 +1,13 @@
+.prodlist {
+    width: 334px;
+    box-sizing: border-box;
+}
+
+.btn_BuyNow{
+    background-color: #f9791f;
+    border: #f9791f;
+}
+.btn_BuyNow:hover{
+    background-color: #f9791f;
+    color: black;
+}
