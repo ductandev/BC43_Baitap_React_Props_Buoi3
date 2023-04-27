@@ -3,8 +3,7 @@ import ProductDetail from './ProductDetail';
 
 export default class ProductItem extends Component {
     render() {
-
-        let { prodInfo } = this.props;
+        let { prodInfo, renderModel } = this.props;
 
         return (
             <div className="card">
@@ -17,7 +16,7 @@ export default class ProductItem extends Component {
                             Add to cart <i className='fa fa-cart-plus'></i>
                         </button>
                         <button className='btn btn-success' data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => {
-                            <ProductDetail setStateModal={this.prodInfo}/>
+                            renderModel(prodInfo)
                         }}>
                             View detail
                         </button>

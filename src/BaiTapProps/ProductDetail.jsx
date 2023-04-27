@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class ProductDetail extends Component {
     render() {
-        let { setStateModal } = this.props;
+        let { changeState } = this.props;
 
         return (
             <div>
@@ -16,14 +16,13 @@ export default class ProductDetail extends Component {
                             <div className="modal-body">
 
                                 <div className="card">
-                                    <img src={setStateModal.image} className='mx-auto' width={304} height={325} alt="" />
+                                    <img src={changeState.image} className='mx-auto' width={304} height={325} alt="" />
                                     <div className="card-body py-0">
-                                        <h3 className='fs-5'>{setStateModal.name}</h3>
-                                        <p className='text-danger fw-semibold'>{setStateModal.price} $</p>
-                                        <p>{setStateModal.description}</p>
+                                        <h3 className='fs-5'>{changeState.name}</h3>
+                                        <p className='text-danger fw-semibold mb-1'>{changeState.price} $</p>
+                                        <p>{changeState.description}</p>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-primary btn_BuyNow">Buy Now</button>
