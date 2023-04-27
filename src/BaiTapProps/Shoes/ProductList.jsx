@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { arrProduct } from '../../src/assets/data/data'
+import { arrProduct } from '../../../src/assets/data/data'
 import ProductItem from './ProductItem'
-import ProductDetail from './ProductDetail';
+import ProductDetail from './ProductDetail'
 
 export default class ProductList extends Component {
 
@@ -22,8 +22,8 @@ export default class ProductList extends Component {
     renderProduct = () => {
         return arrProduct.map((item) => {
             return <div className="col-8 col-md-6 col-lg-4 mt-3 prodlist" key={item.id}>
-                <ProductItem prodInfo={item} renderModel={this.renderModel}/>
-            </div> 
+                <ProductItem prodInfo={item} renderModel={this.renderModel} />
+            </div>
         });
     }
 
@@ -41,7 +41,7 @@ export default class ProductList extends Component {
                 <div className="row justify-content-center my-auto">
                     {this.renderProduct()}
                 </div>
-                <ProductDetail changeState={this.state.spChiTiet}/>
+                <ProductDetail changeState={this.state.spChiTiet} />
             </div>
         )
     }

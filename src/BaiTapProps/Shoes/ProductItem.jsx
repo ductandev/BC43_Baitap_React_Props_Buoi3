@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ProductDetail from './ProductDetail';
 
 export default class ProductItem extends Component {
     render() {

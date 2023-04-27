@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProductList from './ProductList'
+import ProductList from './Shoes/ProductList'
 import './style.css'
 
 export default class App extends Component {
